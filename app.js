@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const multer = require('multer');
 const mammoth = require('mammoth');
 
 const app = express();
 const port = 3000;
+
+app.use(cors()); // Allow requests from all origins
 
 // Multer configuration for file upload
 const upload = multer({ dest: 'uploads/' });
